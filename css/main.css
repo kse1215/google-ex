@@ -1,13 +1,69 @@
 @charset "utf-8";
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-ul, li{
-    list-style: none;
+ul,
+li {
+  list-style: none;
 }
-a{
-    text-decoration: none;
-    color: #0a0a0a;
+a {
+  text-decoration: none;
+  color: #333;
+}
+/* 전체 레이아웃 */
+/* 상단 메뉴 */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: antiquewhite;
+}
+nav > a:hover {
+  text-decoration: underline;
+}
+.navIcon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.navIcon-a {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+.navIcon-a:hover {
+  opacity: 0.8;
+}
+.navIcon-a::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  display: block;
+  opacity: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.5s;
+}
+.navIcon-a:hover::after {
+  opacity: 1;
+}
+#login {
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #4484f3;
+}
+#login:hover {
+  background-color: #166afc;
+  cursor: pointer;
 }
