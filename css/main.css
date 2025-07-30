@@ -56,6 +56,25 @@ nav > a:hover {
 .navIcon-a:hover::after {
   opacity: 1;
 }
+.navIcon-a::before {
+  content: attr(aria-label);
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  padding: 10px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  white-space: nowrap; /* 글자 줄바꿈 방지 */
+  /* opacity: 0; */
+  display: none;
+  transition: all 0.8s;
+}
+.navIcon-a:hover:before {
+  /* opacity: 1; */
+  display: block;
+}
 #login {
   padding: 5px 10px;
   border: 0;
