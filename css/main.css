@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  height: 1500px;
+}
 ul,
 li {
   list-style: none;
@@ -14,12 +17,17 @@ a {
 }
 /* 상단 메뉴 */
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 20px;
+  width: 100%;
   padding: 20px;
-  background-color: antiquewhite;
+  background-color: #fff;
 }
 nav > a:hover {
   text-decoration: underline;
@@ -97,8 +105,8 @@ nav > a:hover {
   width: 70%;
   max-width: 1280px;
   min-width: 390px;
-  margin: 100px auto;
-  background-color: #bad4ff;
+  margin: auto;
+  padding-top: 171px;
 }
 /* 로고 */
 .logo {
@@ -137,6 +145,8 @@ nav > a:hover {
 }
 .search-icon a {
   width: calc(100% / 2);
+  width: 24px;
+  height: 24px;
 }
 .search-icon a image {
   width: 100%;
@@ -146,7 +156,6 @@ nav > a:hover {
   width: 60%;
   max-width: 600px;
   min-width: 200px;
-  background-color: #a9c9ff;
 }
 .search-plus ul {
   display: flex;
@@ -198,18 +207,38 @@ nav > a:hover {
   transition: all 0.5s;
   background-color: rgba(0, 0, 0, 0.2);
 }
-.hover_bg i{
+.hover_bg i {
   position: absolute;
   top: 10px;
-  right: 0;
+  right: 10px;
   opacity: 0;
 }
 /* 호버했을때 */
-.search-plus ul li:hover .hover_bg{
+.search-plus ul li:hover .hover_bg {
   opacity: 1;
 }
-.search-plus ul li:hover .hover_bg i{
-opacity: 1;
-transition: all 1s;
-transition-delay: 0.3s;
+.search-plus ul li:hover .hover_bg i {
+  opacity: 1;
+  transition: all 1s;
+  /* 0.5초 뒤에 나타남 */
+  transition-delay: 0.5s;
+}
+/* 검색버튼 */
+.search-btn {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 10px;
+  width: 50%;
+}
+.search-btn button {
+  border: none;
+  padding: 5px 15px;
+  background-color: #f4f4f4;
+}
+.search-btn button:hover {
+  color: #333;
+  background: linear-gradient(to bottom, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2) ;
+  cursor: pointer;
 }

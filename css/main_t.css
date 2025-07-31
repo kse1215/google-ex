@@ -91,8 +91,7 @@ nav > a:hover {
 .main-wrap {
   width: 70%;
   max-width: 1280px;
-  min-width: 390px;
-  background-color: #dfe4eb;
+  min-width: 550px;
   margin: 100px auto;
   display: flex;
   flex-direction: column;
@@ -138,20 +137,22 @@ nav > a:hover {
 }
 /* 검색 리스트 */
 .search-plus {
-  width: 60%;
-  max-width: 600px;
-  min-width: 200px;
+  width: 50%;
+  margin: auto;
 }
 .search-plus ul {
   display: flex;
+  flex-wrap: wrap;
 }
 .search-plus ul li {
   position: relative;
   width: calc(100% / 5);
-  /* max-width: 110px; */
+  max-width: 110px;
+
   /* background-color: rgb(255, 199, 199); */
 }
 .search-plus ul li a {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -159,6 +160,7 @@ nav > a:hover {
   gap: 10px;
 }
 .search-plus ul li a span {
+  display: block;
   font-size: 14px;
   /* 말줄임표시 */
   white-space: nowrap;
@@ -207,5 +209,24 @@ nav > a:hover {
 .search-plus ul li:hover .hover_bg img {
   opacity: 1;
   transition: all 0.5s;
+  /* 0.5초 뒤에 나타남 */
   transition-delay: 0.5s;
+}
+/* 검색 버튼 */
+.search-btn {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.search-btn button {
+  border: 0;
+  padding: 5px 15px;
+  background-color: #f4f4f4;
+}
+.search-btn button:hover {
+  color: #333;
+  background: linear-gradient(to bottom, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
