@@ -34,6 +34,9 @@ body {
   color: #888;
   font-size: 18px;
 }
+input:focus::placeholder{
+  color: transparent;
+}
 /* 버튼 */
 button {
   border: 0;
@@ -50,4 +53,7 @@ button[type="button"] {
   display: block;
   margin-left: auto;
   background-color: #ffdf29;
+}
+button:hover{
+  cursor: pointer;
 }
